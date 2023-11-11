@@ -44,5 +44,6 @@ All-pixel methods may cause blurred reconstructions in complex-structured region
 ### Problem of fusion efficiency
 The fusion mechanism of all-pixel methods,i.e., max-pooling, discard a large number of features from the input, reducing the utilization of information and affecting the estimation accuracy. MF-PSN [[paper](pdfs/MF-PSN.pdf), [code](https://github.com/Kelvin-Ju/MF-PSN)] introduces a multi-feature fusion network, utilizing max-pooling operations at different feature levels in both shallow and deep layers to capture richer information. CHR-PSN [[paper](pdfs/CHRPSN.pdf), [code]()] extend max-pooling at various scales with different receptive fields, rather than the depth. HPS-Net [[paper](pdfs/HPSNET.pdf), [code]()] introduces a bilateral extraction module that outputs positive and negative information before aggregation to better preserve useful data.
 
-
-
+## Hybrid methods
+Hybrid approaches that combine these strategies may have the benefits of both per-pixel and all-pixel techniques. MT-PS-CNN [[paper](pdfs/MTPSCNN.pdf), [code]()] proposes a two-stage photometric stereo model to construct inter-frame (per-pixel) and intra-frame (all-pixel) representations. 
+HT21 [[paper](pdfs/HT21.pdf), [code]()] built upon the observation maps but incorporated spatial information using 2D and 4D separable convolutions to better capture global effects. Similarly, PSMF-PSN [[paper](pdfs/HT21.pdf), [code]()] introduced a tandem manner for per-pixel and all-pixel feature extraction. GPS-Net [[paper](pdfs/GPSNET.pdf), [code](https://github.com/ZhuokunYao/GPS_NET)] introduced a structure-aware graph convolutional network \cite{chang2018structure} to establish connections between an arbitrary number of observations per pixel.
