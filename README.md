@@ -38,6 +38,11 @@ All-pixel methods keep all the pixels together, having the advantage of explorin
 ### Problem of spatially varying BRDF 
 Since all-pixel methods leverage convolutional networks to process input in a patch-based manner, they may have difficulties in dealing with steep color changes caused by surfaces with spatially varying materials. PS-FCN (Norm.)  [[paper](pdfs/PSFCNN.pdf), [code](https://github.com/guanyingc/PS-FCN)] proposed an observation normalization method to eliminate the impact of changing albedo. NormAttention-PSN [[paper](pdfs/NAPSN.pdf), [code](https://github.com/Kelvin-Ju/NormAttention-PSN)] further solve the normalization problem under strong non-Lambertian surfaces.
 
+### Problem of blurry details
+All-pixel methods may cause blurred reconstructions in complex-structured regions mainly because the widely used Euclidean-based loss functions can hardly constrain the high-frequency (i.e., complex-structured) representations, because of the “regression-to-the-mean” problem. Attention-PSN [[paper](pdfs/ATTPSN.pdf), [code](https://github.com/Kelvin-Ju/NormAttention-PSN)] and NormAttention-PSN [[paper](pdfs/NAPSN.pdf), [code](https://github.com/Kelvin-Ju/NormAttention-PSN)] proposed an attention-weighted loss to produce detailed reconstructions, which learn an adaptive weight of detail-preserving gradient loss for high-frequency regions.
+
+### Problem of fusion efficiency
+The fusion mechanism of all-pixel methods,i.e., max-pooling, discard a large number of features from the input, reducing the utilization of information and affecting the estimation accuracy. MF-PSN [[paper](pdfs/MF-PSN.pdf), [code](https://github.com/Kelvin-Ju/MF-PSN)] introduces a multi-feature fusion network, utilizing max-pooling operations at different feature levels in both shallow and deep layers to capture richer information. CHR-PSN [[paper](pdfs/CHRPSN.pdf), [code]()] extend max-pooling at various scales with different receptive fields, rather than the depth. HPS-Net [[paper](pdfs/HPSNET.pdf), [code]()] introduces a bilateral extraction module that outputs positive and negative information before aggregation to better preserve useful data.
 
 
 
