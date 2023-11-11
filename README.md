@@ -35,6 +35,8 @@ Original per-pixel methods designed to represent a single pixel, don't explicitl
 ## All-pixel methods
 All-pixel methods keep all the pixels together, having the advantage of exploring intra-image intensity variations across an entire input image. The original all-pixel method was introduced in PS-FCN [[paper](pdfs/PSFCN.pdf), [code](https://github.com/guanyingc/PS-FCN)] through the use of a max-pooling layer, which operates in the channel dimension and fuses features from an arbitrary number of inputs.
 
+### Problem of spatially varying BRDF 
+Since all-pixel methods leverage convolutional networks to process input in a patch-based manner, they may have difficulties in dealing with steep color changes caused by surfaces with spatially varying materials. PS-FCN (Norm.)  [[paper](pdfs/PSFCNN.pdf), [code](https://github.com/guanyingc/PS-FCN)] proposed an observation normalization method to eliminate the impact of changing albedo. NormAttention-PSN [[paper](pdfs/NAPSN.pdf), [code](https://github.com/Kelvin-Ju/NormAttention-PSN)] further solve the normalization problem under strong non-Lambertian surfaces.
 
 
 
