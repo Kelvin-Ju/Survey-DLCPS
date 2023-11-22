@@ -75,7 +75,32 @@ IS22 [[paper](https://ieeexplore.ieee.org/document/9898033), [Code]()]  proposed
 
 ## Data sets for photometric stereo
 
+### Training data sets
 
+Blobby and Sculpture data set, rendered by MERL BRDFs.  [Download Web](http://www.visionlab.cs.hku.hk/data/PS-FCN/datasets/)
 
+CyclesPS data set,  rendered by Disney’s principled BSDFs.  [Download Web](https://github.com/satoshi-ikehata/CNN-PS-ECCV2018)
 
-[[paper](), [Code]()] 
+### Testing data sets
+Gourd&Apple data set [[paper](https://ieeexplore.ieee.org/document/4587656), [DownloadWeb](http://vision.ucsd.edu/~nalldrin/research/)] 
+
+Gourd&Apple data set [[paper](https://ieeexplore.ieee.org/document/1541276), [DownloadWeb](https://vgl.ict.usc.edu/Data/LightStage/)] 
+
+DiLiGenT data set [[paper](https://ieeexplore.ieee.org/document/8281537), [DownloadWeb](https://sites.google.com/site/photometricstereodata/single)] 
+
+DiLiGenT-10^2 data set [[paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Ren_DiLiGenT102_A_Photometric_Stereo_Benchmark_Dataset_With_Controlled_Shape_and_CVPR_2022_paper.pdf), [DownloadWeb](https://photometricstereo.github.io/diligent102.html)] 
+
+DiLiGenT-Pi data set [[paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_DiLiGenT-Pi_Photometric_Stereo_for_Planar_Surfaces_with_Rich_Details_-_ICCV_2023_paper.pdf), [DownloadWeb](https://photometricstereo.github.io/diligentpi.html)] 
+
+## Benchmark Evaluation 
+
+<p align="center">
+    <img src='imgs/96.png' width="750" >
+</p>
+Performance on the DiLiGenT benchmark with 96 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
+
+<p align="center">
+    <img src='imgs/10.png' width="750" >
+</p>
+Performance on the DiLiGenT benchmark with 10 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
+
