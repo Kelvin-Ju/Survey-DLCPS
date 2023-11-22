@@ -25,7 +25,7 @@ The observation map aggregates the corresponding pixels from each input image in
 <br>
 
 ### Problem of sparse input
-Some works were proposed to solve the sparse input images problem, such as SPLINE-Net [[paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Zheng_SPLINE-Net_Sparse_Photometric_Stereo_Through_Lighting_Interpolation_and_Normal_Estimation_ICCV_2019_paper.html), [code](https://github.com/yiming-j/SPLINE-Net)] and LMPS [[paper](https://openaccess.thecvf.com/content_CVPR_2019/html/Li_Learning_to_Minify_Photometric_Stereo_CVPR_2019_paper.html), [code]([https://github.com/satoshi-ikehata/CNN-PS-ECCV2018](https://github.com/junxuan-li/Learning-to-Minify-Photometric-Stereo)https://github.com/junxuan-li/Learning-to-Minify-Photometric-Stereo)]. These two methods adopt opposite strategies to solve the sparse inputs. SPLINE-Net proposes a lighting interpolation network to generate dense lighting observation maps when the input is sparse. LMPS reduces the demands on the number of images by only learning the critical illumination conditions via a connection table.
+Some works were proposed to solve the sparse input images problem, such as SPLINE-Net [[paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Zheng_SPLINE-Net_Sparse_Photometric_Stereo_Through_Lighting_Interpolation_and_Normal_Estimation_ICCV_2019_paper.html), [code](https://github.com/yiming-j/SPLINE-Net)] and LMPS [[paper](https://openaccess.thecvf.com/content_CVPR_2019/html/Li_Learning_to_Minify_Photometric_Stereo_CVPR_2019_paper.html), [code](https://github.com/junxuan-li/Learning-to-Minify-Photometric-Stereo)]. These two methods adopt opposite strategies to solve the sparse inputs. SPLINE-Net proposes a lighting interpolation network to generate dense lighting observation maps when the input is sparse. LMPS reduces the demands on the number of images by only learning the critical illumination conditions via a connection table.
 <br>
 ### Problem of global information
 
@@ -55,5 +55,27 @@ Most of the deep learning-based calibrated photometric stereo networks are based
 The photometric stereo task can leverage the self-attention module effectively. Theoretically, the surface normal of a point only depends on itself, rather than its relationship with distant points. However, due to the presence of shadows and inter-reflections, capturing long-range context becomes essential for accurate feature extraction. Therefore, Transformer-based photometric stereo models can benefit from both the non-local information acquired through the self-attention module and the embedded local context information obtained through traditional convolutional layers. 
 
 ##  Categorization Based on Supervision
+<p align="center">
+    <img src='imgs/supclass.png' width="750" >
+</p>
+we summarize the differences among supervised, self-supervised, and multi-supervised photometric stereo networks.
+
+### Supervised photometric stereo methods
+
+Plenty of deep photometric stereo networks have been proposed with the supervised framework. A few methods (DPSN [[paper](https://openaccess.thecvf.com/content_ICCV_2017_workshops/w9/html/Santo_Deep_Photometric_Stereo_ICCV_2017_paper.html), [Code](https://github.com/hiroaki-santo/deep-photometric-stereo-network)], CNN-PS [[paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Ikehata_CNN-PS_CNN-based_Photometric_ECCV_2018_paper.html), [code](https://github.com/satoshi-ikehata/CNN-PS-ECCV2018)], LMPS [[paper](https://openaccess.thecvf.com/content_CVPR_2019/html/Li_Learning_to_Minify_Photometric_Stereo_CVPR_2019_paper.html), [code](https://github.com/junxuan-li/Learning-to-Minify-Photometric-Stereo)]) utilized the L2 loss (mean squared error loss) to optimize the training, while the others applied the cosine loss.
+
+## Self-supervised photometric stereo methods
+
+Measuring the surface normals of real objects is very difficult and expensive, because it needs high-precision 3D scanners to reconstruct the ground-truth shape, and requires much manpower to align the viewpoints between surface normal maps and multiple images (pixel alignment). Synthetic training data is a possible way, but still requires efforts to generate photo-realistic synthetic images. Self-supervised learning strategy can overcome the above shortcomings to some extent. IRPS [[paper](https://proceedings.mlr.press/v80/taniai18a.html), [Code](https://github.com/t-taniai/neuralps)] first proposed a self-supervised convolutional network
+that took the whole set of images as input. The model directly generated surface normals by minimizing the reconstruction loss between re-rendered images obtained via the rendering equation and input images. KS21 [[paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Kaya_Uncalibrated_Neural_Inverse_Rendering_for_Photometric_Stereo_of_General_Surfaces_CVPR_2021_paper.pdf), [Code](https://github.com/suryanshkumar/Uncalibrated_PS_CVPR21)] further extended to deal with inter-reflection by explicitly modeling the concave and convex parts of a complex surface.  Recently, LL22a [[paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Neural_Reflectance_for_Shape_Recovery_With_Shadow_Handling_CVPR_2022_paper.pdf), [Code](https://github.com/junxuan-li/Neural-Reflectance-PS)] proposed a coordinate-based deep network to parameterize the unknown surface normal and the unknown reflectance at every surface point. The method learned a series of neural specular basis functions to fit the observed specularities and explicitly parameterized shadowed regions by tracing the estimated depth map.
+ 
+## Multi-supervised photometric stereo methods
+
+IS22 [[paper](https://ieeexplore.ieee.org/document/9898033), [Code]()]  proposed a network to deconstruct the observation map into physical interpretable components such as surface normal, surface roughness, and surface base color. These components were then integrated via the physical formation model. Consequently, the training loss for optimization consisted of the normal reconstruction loss and the inverse rendering loss. DR-PSN [[paper](https://ieeexplore.ieee.org/abstract/document/9376632), [Code]()]  introduced a dual regression network for calibrated photometric stereo. This network combined the surface-normal constraint with the constraint of the reconstructed re-lit image. Additionally, GR-PSN [[paper](https://ieeexplore.ieee.org/abstract/document/10306333), [Code](https://github.com/Kelvin-Ju/GR-PSN)]  utilized a parallel framework to simultaneously learn two arbitrary materials for an object and included an additional material transform loss. These methods employed an inverse subnetwork to re-render reconstructed images based on predicted surface normals. They used CNNs to render reconstructed images rather than following the rendering equation.
+
+## Data sets for photometric stereo
 
 
+
+
+[[paper](), [Code]()] 
