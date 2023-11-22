@@ -51,3 +51,9 @@ HT21 [[paper](https://ieeexplore.ieee.org/abstract/document/9665914?casa_token=6
 ## Categorization Based on Network Architectures
 
 Most of the deep learning-based calibrated photometric stereo networks are based on convolutional networks, some advanced architectures are widely used, such as ResNet, DenseNet, and HR-Net. In recent years, Transformer with a self-attention module was also employed in the context of photometric stereo. SPS-Net [[paper](https://ieeexplore.ieee.org/abstract/document/9310261?casa_token=4HSHz4ve0V8AAAAA:1y56NDUqc23qLi1ql-izOTesbntsgmdkf13RB50TS659iP2nGmpmk0hzxMWH0QoUsv9fa1XzeKQ), [code]()] is the first to propose a self-attention photometric stereo network, which aggregates photometric information through a self-attention mechanism.  PS-Transformer  [[paper](https://www.bmvc2021-virtualconference.com/assets/papers/0319.pdf), [code](https://github.com/satoshi-ikehata/PS-Transformer-BMVC2021)]  then designed a dual branch to explore pixel and image-wise feature for sparse photometric stereo images.
+
+The photometric stereo task can leverage the self-attention module effectively. Theoretically, the surface normal of a point only depends on itself, rather than its relationship with distant points. However, due to the presence of shadows and inter-reflections, capturing long-range context becomes essential for accurate feature extraction. Therefore, Transformer-based photometric stereo models can benefit from both the non-local information acquired through the self-attention module and the embedded local context information obtained through traditional convolutional layers. 
+
+##  Categorization Based on Supervision
+
+
