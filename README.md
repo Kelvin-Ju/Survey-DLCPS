@@ -1,6 +1,6 @@
 # Survey-DLCPS
 
-## Deep Learning Methods for Calibrated Photometric Stereo and Beyond: A Survey
+## Deep Learning Methods for Calibrated Photometric Stereo and Beyond
 
 ## Introduction
 <p align="center">
