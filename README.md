@@ -3,7 +3,7 @@
 ## Deep Learning Methods for Calibrated Photometric Stereo and Beyond
 
 ## Introduction
-<p align="center">
+<p align="left">
     <img src='imgs/ps.png' width="300" >
 </p>
 Photometric stereo methods obtain detailed shape reconstructions from multiple images under different illuminations. The orange box shows the general non-Lambertian surface reflectance. To solve the non-Lambertian surface, many methods have addressed non-Lambertian photometric stereo. This paper focuses on deep learning-based calibrated photometric stereo methods and provides a comprehensive review. 
@@ -18,7 +18,7 @@ The first deep learning method, DPSN [[paper](https://openaccess.thecvf.com/cont
 ## Per-pixel methods
 The per-pixel strategy is first implemented using the observation map in CNN-PS [[paper](https://openaccess.thecvf.com/content_ECCV_2018/html/Ikehata_CNN-PS_CNN-based_Photometric_ECCV_2018_paper.html), [code](https://github.com/satoshi-ikehata/CNN-PS-ECCV2018)].
 <br>
-<p align="center">
+<p align="left">
     <img src='imgs/om.png' width="300" >
 </p>
 The observation map aggregates the corresponding pixels from each input image into a fixed-size observation map using the 2D coordinates of the projected normalized lighting directions (along the axis-z direction). Here, a, b, and c stand for the number of input images (lights), while 1, 2, and 3 stand for the index of pixel position. 
@@ -55,7 +55,7 @@ Most of the deep learning-based calibrated photometric stereo networks are based
 The photometric stereo task can leverage the self-attention module effectively. Theoretically, the surface normal of a point only depends on itself, rather than its relationship with distant points. However, due to the presence of shadows and inter-reflections, capturing long-range context becomes essential for accurate feature extraction. Therefore, Transformer-based photometric stereo models can benefit from both the non-local information acquired through the self-attention module and the embedded local context information obtained through traditional convolutional layers. 
 
 ##  Categorization Based on Supervision
-<p align="center">
+<p align="left">
     <img src='imgs/supclass.png' width="750" >
 </p>
 we summarize the differences among supervised, self-supervised, and multi-supervised photometric stereo networks.
@@ -78,28 +78,51 @@ IS22 [[paper](https://ieeexplore.ieee.org/document/9898033), [Code]()]  proposed
 ### Training data sets
 
 Blobby and Sculpture data set, rendered by MERL BRDFs.  [Download Web](http://www.visionlab.cs.hku.hk/data/PS-FCN/datasets/)
+<p align="left">
+    <img src='imgs/merl.png' width="350" >
+</p>
 
 CyclesPS data set,  rendered by Disney’s principled BSDFs.  [Download Web](https://github.com/satoshi-ikehata/CNN-PS-ECCV2018)
+<p align="left">
+    <img src='imgs/cyclesps.png' width="650" >
+</p>
 
 ### Testing data sets
 Gourd&Apple data set [[paper](https://ieeexplore.ieee.org/document/4587656), [DownloadWeb](http://vision.ucsd.edu/~nalldrin/research/)] 
+<p align="left">
+    <img src='imgs/apple.png' width="400" >
+</p>
 
-Gourd&Apple data set [[paper](https://ieeexplore.ieee.org/document/1541276), [DownloadWeb](https://vgl.ict.usc.edu/Data/LightStage/)] 
+Light Stage Data Gallery [[paper](https://ieeexplore.ieee.org/document/1541276), [DownloadWeb](https://vgl.ict.usc.edu/Data/LightStage/)] 
+<p align="left">
+    <img src='imgs/gallery.png' width="600" >
+</p>
 
 DiLiGenT data set [[paper](https://ieeexplore.ieee.org/document/8281537), [DownloadWeb](https://sites.google.com/site/photometricstereodata/single)] 
+<p align="left">
+    <img src='imgs/diligent.png' width="850" >
+</p>
+
 
 DiLiGenT-10^2 data set [[paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Ren_DiLiGenT102_A_Photometric_Stereo_Benchmark_Dataset_With_Controlled_Shape_and_CVPR_2022_paper.pdf), [DownloadWeb](https://photometricstereo.github.io/diligent102.html)] 
+<p align="left">
+    <img src='imgs/102.png' width="850" >
+</p>
 
 DiLiGenT-Pi data set [[paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_DiLiGenT-Pi_Photometric_Stereo_for_Planar_Surfaces_with_Rich_Details_-_ICCV_2023_paper.pdf), [DownloadWeb](https://photometricstereo.github.io/diligentpi.html)] 
+<p align="left">
+    <img src='imgs/pi.png' width="800" >
+</p>
+
 
 ## Benchmark Evaluation 
 
-<p align="center">
+<p align="left">
     <img src='imgs/96.png' width="750" >
 </p>
 Performance on the DiLiGenT benchmark with 96 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
 
-<p align="center">
+<p align="left">
     <img src='imgs/10.png' width="750" >
 </p>
 Performance on the DiLiGenT benchmark with 10 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
