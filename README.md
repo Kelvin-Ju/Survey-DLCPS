@@ -127,3 +127,34 @@ Performance on the DiLiGenT benchmark with 96 images, measured in terms of MAE i
 </p>
 Performance on the DiLiGenT benchmark with 10 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
 
+### Comparisons Visualization  
+<p align="left">
+    <img src='imgs/figcompare6.png' width="800" >
+</p>
+Quantitative results for object BUDDHA, tested with 96 input images, in terms of MAE in degrees.
+
+
+<p align="left">
+    <img src='imgs/figcompare4.png' width="800" >
+</p>
+Quantitative results for object CAT, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcompare3.png' width="800" >
+</p>
+Quantitative results for object GOBLET, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcompare2.png' width="800" >
+</p>
+Quantitative results for object HARVEST, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcompare5.png' width="800" >
+</p>
+Quantitative results for object POT2, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcompare.png' width="800" >
+</p>
+Quantitative results for object READING, tested with 96 input images, in terms of MAE in degrees.
