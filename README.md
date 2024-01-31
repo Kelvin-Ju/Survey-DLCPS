@@ -118,7 +118,7 @@ DiLiGenT-Pi data set [[paper](https://openaccess.thecvf.com/content/ICCV2023/pap
 ## Benchmark Evaluation 
 
 <p align="left">
-    <img src='imgs/96.png' width="750" >
+    <img src='imgs/96n.png' width="750" >
 </p>
 Performance on the DiLiGenT benchmark with 96 images, measured in terms of MAE in degrees. The compared methods are ranked by the average MAE of ten objects. 
 
