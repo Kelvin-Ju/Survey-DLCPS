@@ -129,15 +129,29 @@ Performance on the DiLiGenT benchmark with 10 images, measured in terms of MAE i
 
 ### Comparisons Visualization  
 <p align="left">
+    <img src='imgs/figcompareball.png' width="800" >
+</p>
+Quantitative results for object BALL, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcomparebear.png' width="800" >
+</p>
+Quantitative results for object BEAR, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
     <img src='imgs/figcompare6.png' width="800" >
 </p>
 Quantitative results for object BUDDHA, tested with 96 input images, in terms of MAE in degrees.
-
 
 <p align="left">
     <img src='imgs/figcompare4.png' width="800" >
 </p>
 Quantitative results for object CAT, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcomparecow.png' width="800" >
+</p>
+Quantitative results for object COW, tested with 96 input images, in terms of MAE in degrees.
 
 <p align="left">
     <img src='imgs/figcompare3.png' width="800" >
@@ -148,6 +162,11 @@ Quantitative results for object GOBLET, tested with 96 input images, in terms of
     <img src='imgs/figcompare2.png' width="800" >
 </p>
 Quantitative results for object HARVEST, tested with 96 input images, in terms of MAE in degrees.
+
+<p align="left">
+    <img src='imgs/figcomparepot1.png' width="800" >
+</p>
+Quantitative results for object POT1, tested with 96 input images, in terms of MAE in degrees.
 
 <p align="left">
     <img src='imgs/figcompare5.png' width="800" >
