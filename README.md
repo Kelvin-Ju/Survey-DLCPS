@@ -2,7 +2,7 @@
 
 ## Deep Learning Methods for Calibrated Photometric Stereo and Beyond
 Accepted By IEEE Transactions on Pattern Analysis and Machine Intelligence
-
+https://arxiv.org/pdf/2212.08414.pdf
 ## Introduction
 <p align="left">
     <img src='imgs/ps.png' width="300" >
