@@ -1,6 +1,7 @@
 # Survey-DLCPS
 
 ## Deep Learning Methods for Calibrated Photometric Stereo and Beyond
+Accepted By IEEE Transactions on Pattern Analysis and Machine Intelligence
 
 ## Introduction
 <p align="left">
