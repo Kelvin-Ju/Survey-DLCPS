@@ -3,6 +3,15 @@
 ## Deep Learning Methods for Calibrated Photometric Stereo and Beyond
 Accepted By IEEE Transactions on Pattern Analysis and Machine Intelligence
 https://arxiv.org/pdf/2212.08414.pdf
+## Please consider citing our paper if you find it useful in your research.
+@article{ju2024deep,
+  title={Deep Learning Methods for Calibrated Photometric Stereo and Beyond},
+  author={Ju, Yakun and Lam, Kin-Man and Xie, Wuyuan and Zhou, Huiyu and Dong, Junyu and Shi, Boxin},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
+
 ## Introduction
 <p align="left">
     <img src='imgs/ps.png' width="300" >
